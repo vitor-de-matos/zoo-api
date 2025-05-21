@@ -7,7 +7,7 @@ import {
   Entity,
 } from 'typeorm';
 
-@Entity()
+@Entity('keeper')
 export class Keeper {
   @PrimaryGeneratedColumn()
   id: number;

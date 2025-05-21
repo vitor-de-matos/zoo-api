@@ -1,7 +1,7 @@
 import { Animal } from 'src/animal/models/entity/animal.entity';
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 
-@Entity()
+@Entity('habitat')
 export class Habitat {
   @PrimaryGeneratedColumn()
   id: number;
