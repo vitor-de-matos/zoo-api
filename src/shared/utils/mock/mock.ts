@@ -1,0 +1,30 @@
+export const mockQueryBuilder = {
+  where: jest.fn().mockReturnThis(),
+  andWhere: jest.fn().mockReturnThis(),
+  orderBy: jest.fn().mockReturnThis(),
+  addOrderBy: jest.fn().mockReturnThis(),
+  getManyAndCount: jest.fn().mockReturnThis(),
+  getMany: jest.fn().mockReturnThis(),
+  addSelect: jest.fn().mockReturnThis(),
+  leftJoin: jest.fn().mockReturnThis(),
+  leftJoinAndSelect: jest.fn().mockReturnThis(),
+  innerJoinAndSelect: jest.fn().mockReturnThis(),
+  innerJoin: jest.fn().mockReturnThis(),
+  getOne: jest.fn().mockReturnThis(),
+  skip: jest.fn().mockReturnThis(),
+  take: jest.fn().mockReturnThis(),
+};
+
+export const mockRepository = {
+  createQueryBuilder: jest.fn(() => mockQueryBuilder),
+  update: jest.fn(),
+  findOne: jest.fn(),
+  find: jest.fn(),
+  where: jest.fn(),
+  order: jest.fn(),
+  relations: jest.fn(),
+  save: jest.fn(),
+  delete: jest.fn(),
+  count: jest.fn(),
+  query: jest.fn(),
+};
