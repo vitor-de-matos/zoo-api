@@ -38,7 +38,7 @@ export class TransferRecords {
 
   @ManyToOne(() => Animal, (animal) => animal.transferRecords)
   @JoinColumn({ name: 'id_animal' })
-  species: Animal;
+  animal: Animal;
 
   @ManyToOne(() => Keeper, (keeper) => keeper.transferRecords)
   @JoinColumn({ name: 'id_keeper' })
