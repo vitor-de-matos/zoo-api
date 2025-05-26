@@ -1,19 +1,19 @@
-import { Habitat } from 'src/habitat/models/entity/habitat.entity';
-import { Keeper } from 'src/keeper/models/entity/keeper.entity';
 import { MeasurementRecord } from 'src/measurement-record/models/entity/measurement-record.entity';
+import { QuarantineRecord } from 'src/quarentine-record/models/entity/quarentine-record.entity';
+import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
 import { MedicalRecord } from 'src/medical-record/models/entity/medical-record.entity';
 import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
-import { QuarantineRecord } from 'src/quarentine-record/models/entity/quarentine-record.entity';
+import { Habitat } from 'src/habitat/models/entity/habitat.entity';
 import { Species } from 'src/species/models/entity/species.entity';
-import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
+import { Keeper } from 'src/keeper/models/entity/keeper.entity';
 import {
-  Column,
-  Entity,
+  PrimaryGeneratedColumn,
   JoinColumn,
   ManyToMany,
   ManyToOne,
   OneToMany,
-  PrimaryGeneratedColumn,
+  Column,
+  Entity,
 } from 'typeorm';
 
 @Entity()
