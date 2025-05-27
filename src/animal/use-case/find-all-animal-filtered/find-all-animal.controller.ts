@@ -27,12 +27,12 @@ export class FindAllAnimalController {
     description: 'Erro interno entre em contato com o suporte.',
   })
   @Get()
-  async find(@Query() AnimalDTO: FindAnimalDTO): Promise<{
+  async find(@Query() animalDTO: FindAnimalDTO): Promise<{
     data: Animal[];
     currentPage: number;
     totalPages: number;
     totalItems: number;
   }> {
-    return await this.animalService.find(AnimalDTO);
+    return await this.animalService.find(animalDTO);
   }
 }

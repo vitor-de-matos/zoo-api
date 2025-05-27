@@ -16,7 +16,7 @@ import {
 export class CreateAnimalController {
   constructor(
     @Inject(CreateAnimalUseCase)
-    private readonly createBannerService: CreateAnimalUseCase,
+    private readonly animalService: CreateAnimalUseCase,
   ) {}
 
   @ApiOperation({ summary: 'Adicionar banner' })
@@ -26,7 +26,7 @@ export class CreateAnimalController {
     description: 'Erro interno entre em contato com o suporte.',
   })
   @Post()
-  async create(@Body() bannerDTO: CreateAnimalDTO): Promise<number> {
-    return await this.createBannerService.create(bannerDTO);
+  async create(@Body() animalDTO: CreateAnimalDTO): Promise<number> {
+    return await this.animalService.create(animalDTO);
   }
 }

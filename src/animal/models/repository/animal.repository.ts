@@ -16,7 +16,7 @@ import {
 } from 'typeorm';
 
 @Injectable()
-export class FaqRepository implements IAnimalRepo {
+export class AnimalRepository implements IAnimalRepo {
   constructor(
     @InjectRepository(Animal, DB_PG_DATABASE)
     private readonly repository: Repository<Animal>,

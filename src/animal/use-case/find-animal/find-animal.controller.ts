@@ -20,10 +20,10 @@ import {
 @ApiTags('Animal')
 @ApiBearerAuth('access-token')
 @Controller('animal')
-export class FindBannerController {
+export class FindAnimalController {
   constructor(
     @Inject(FindAnimalUseCase)
-    private readonly AnimalService: FindAnimalUseCase,
+    private readonly animalService: FindAnimalUseCase,
   ) {}
 
   @ApiOperation({ summary: 'Buscar animal' })
@@ -40,6 +40,6 @@ export class FindBannerController {
         message: 'Requisição inválida. Entre em contato com o suporte.',
       });
     }
-    return await this.AnimalService.find(id);
+    return await this.animalService.find(id);
   }
 }
