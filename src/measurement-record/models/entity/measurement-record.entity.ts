@@ -10,7 +10,7 @@ import { Animal } from '../../../animal/models/entity/animal.entity';
 @Entity('measurement_records')
 export class MeasurementRecord {
   @PrimaryGeneratedColumn()
-  id: string;
+  id: number;
 
   @Column('decimal', { precision: 5, scale: 2, nullable: true })
   weightKg: number;
