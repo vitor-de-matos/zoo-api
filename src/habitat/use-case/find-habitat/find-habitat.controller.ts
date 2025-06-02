@@ -1,21 +1,21 @@
+import { FindHabitatUseCase } from './find-habitat.use-case';
+import { Habitat } from 'src/habitat/models/entity/habitat.entity';
 import {
-  Controller,
-  Get,
-  Inject,
-  NotAcceptableException,
-  Param,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiNotFoundResponse,
+  ApiBearerAuth,
   ApiOkResponse,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindHabitatUseCase } from './find-habitat.use-case';
-import { Habitat } from 'src/habitat/models/entity/habitat.entity';
+import {
+  NotAcceptableException,
+  Controller,
+  Inject,
+  Param,
+  Get,
+} from '@nestjs/common';
 
 @ApiTags('Habitate')
 @ApiBearerAuth('access-token')

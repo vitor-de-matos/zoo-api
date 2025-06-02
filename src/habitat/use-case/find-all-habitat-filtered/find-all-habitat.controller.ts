@@ -1,15 +1,15 @@
 import { Controller, Get, Inject, Query } from '@nestjs/common';
+import { FindAllHabitatUseCase } from './find-all-habitat.use-case';
+import { FindHabitatDTO } from 'src/habitat/models/dtos/find-habitat.dto';
+import { Habitat } from 'src/habitat/models/entity/habitat.entity';
 import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
+  ApiBearerAuth,
   ApiOkResponse,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindAllHabitatUseCase } from './find-all-habitat.use-case';
-import { FindHabitatDTO } from 'src/habitat/models/dtos/find-habitat.dto';
-import { Habitat } from 'src/habitat/models/entity/habitat.entity';
 
 @ApiTags('Habitate')
 @ApiBearerAuth('access-token')

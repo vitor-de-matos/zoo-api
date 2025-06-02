@@ -1,21 +1,21 @@
+import { FindMeasurementRecordUseCase } from './find-measurement-record.use-case';
+import { MeasurementRecord } from 'src/measurement-record/models/entity/measurement-record.entity';
 import {
-  Controller,
-  Get,
-  Inject,
-  NotAcceptableException,
-  Param,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
+  ApiBearerAuth,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindMeasurementRecordUseCase } from './find-measurement-record.use-case';
-import { MeasurementRecord } from 'src/measurement-record/models/entity/measurement-record.entity';
+import {
+  NotAcceptableException,
+  Controller,
+  Inject,
+  Param,
+  Get,
+} from '@nestjs/common';
 
 @ApiTags('Registro de medidas')
 @ApiBearerAuth('access-token')

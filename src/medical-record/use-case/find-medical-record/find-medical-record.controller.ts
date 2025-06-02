@@ -1,21 +1,21 @@
+import { FindMedicalRecordUseCase } from './find-medical-record.use-case';
+import { MedicalRecord } from 'src/medical-record/models/entity/medical-record.entity';
 import {
-  Controller,
-  Get,
-  Inject,
-  NotAcceptableException,
-  Param,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
+  ApiBearerAuth,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindMedicalRecordUseCase } from './find-medical-record.use-case';
-import { MedicalRecord } from 'src/medical-record/models/entity/medical-record.entity';
+import {
+  NotAcceptableException,
+  Controller,
+  Inject,
+  Param,
+  Get,
+} from '@nestjs/common';
 
 @ApiTags('Registro medico')
 @ApiBearerAuth('access-token')

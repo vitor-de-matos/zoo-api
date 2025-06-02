@@ -1,14 +1,14 @@
 import { Body, Controller, Inject, Post } from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiBody,
-  ApiCreatedResponse,
-  ApiInternalServerErrorResponse,
-  ApiOperation,
-  ApiTags,
-} from '@nestjs/swagger';
 import { CreateNutritionUseCase } from './create-nutrition.use-case';
 import { CreateNutritionDTO } from 'src/nutrition/models/dtos/create-nutrition.dto';
+import {
+  ApiInternalServerErrorResponse,
+  ApiCreatedResponse,
+  ApiBearerAuth,
+  ApiOperation,
+  ApiBody,
+  ApiTags,
+} from '@nestjs/swagger';
 
 @ApiTags('Nutrição')
 @ApiBearerAuth('access-token')

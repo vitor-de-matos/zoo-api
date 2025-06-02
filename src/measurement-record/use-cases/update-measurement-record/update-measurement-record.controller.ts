@@ -1,23 +1,23 @@
+import { UpdateMeasurementRecordUseCase } from './update-measurement-record.use-case';
+import { UpdateMeasurementRecordDTO } from 'src/measurement-record/models/dtos/update-measurement-record.dto';
 import {
-  Body,
-  Controller,
-  Inject,
-  NotAcceptableException,
-  Param,
-  Patch,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiBody,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
+  ApiBearerAuth,
   ApiOperation,
+  ApiBody,
   ApiTags,
 } from '@nestjs/swagger';
-import { UpdateMeasurementRecordUseCase } from './update-measurement-record.use-case';
-import { UpdateMeasurementRecordDTO } from 'src/measurement-record/models/dtos/update-measurement-record.dto';
+import {
+  NotAcceptableException,
+  Controller,
+  Inject,
+  Param,
+  Patch,
+  Body,
+} from '@nestjs/common';
 
 @ApiTags('Registro de medidas')
 @ApiBearerAuth('access-token')

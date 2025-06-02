@@ -1,12 +1,12 @@
+import { UpdateMedicalRecordDTO } from 'src/medical-record/models/dtos/update-medical-record.dto';
+import { IMedicalRecordRepo } from 'src/medical-record/models/interface/medical-record-repo.interface';
+import { MedicalRecord } from 'src/medical-record/models/entity/medical-record.entity';
 import {
-  Inject,
-  Injectable,
   InternalServerErrorException,
   NotFoundException,
+  Injectable,
+  Inject,
 } from '@nestjs/common';
-import { UpdateMedicalRecordDTO } from 'src/medical-record/models/dtos/update-medical-record.dto';
-import { MedicalRecord } from 'src/medical-record/models/entity/medical-record.entity';
-import { IMedicalRecordRepo } from 'src/medical-record/models/interface/medical-record-repo.interface';
 
 @Injectable()
 export class UpdateMedicalRecordUseCase {

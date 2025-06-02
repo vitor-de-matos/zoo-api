@@ -1,23 +1,23 @@
+import { UpdateKeeperUseCase } from './update-keeper.use-case';
+import { UpdateKeeperDTO } from 'src/keeper/models/dtos/update-keeper.dto';
 import {
-  Body,
-  Controller,
-  Inject,
-  NotAcceptableException,
-  Param,
-  Patch,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiBody,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
+  ApiBearerAuth,
   ApiOperation,
+  ApiBody,
   ApiTags,
 } from '@nestjs/swagger';
-import { UpdateKeeperUseCase } from './update-keeper.use-case';
-import { UpdateKeeperDTO } from 'src/keeper/models/dtos/update-keeper.dto';
+import {
+  NotAcceptableException,
+  Controller,
+  Inject,
+  Param,
+  Patch,
+  Body,
+} from '@nestjs/common';
 
 @ApiTags('Tratador')
 @ApiBearerAuth('access-token')

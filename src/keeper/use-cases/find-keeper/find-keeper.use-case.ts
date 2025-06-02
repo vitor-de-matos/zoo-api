@@ -1,6 +1,6 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
-import { Keeper } from 'src/keeper/models/entity/keeper.entity';
 import { IKeeperRepo } from 'src/keeper/models/interface/keeper-repo.interface';
+import { Keeper } from 'src/keeper/models/entity/keeper.entity';
 
 @Injectable()
 export class FindKeeperUseCase {

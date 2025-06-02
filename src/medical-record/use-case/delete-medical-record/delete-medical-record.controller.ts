@@ -1,19 +1,19 @@
+import { DeleteMedicalRecordUseCase } from './delete-medical-record.use-case';
 import {
-  Controller,
-  Delete,
-  Inject,
-  NotAcceptableException,
-  Param,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotFoundResponse,
+  ApiBearerAuth,
   ApiOkResponse,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { DeleteMedicalRecordUseCase } from './delete-medical-record.use-case';
+import {
+  NotAcceptableException,
+  Controller,
+  Delete,
+  Inject,
+  Param,
+} from '@nestjs/common';
 
 @ApiTags('Registro medico')
 @ApiBearerAuth('access-token')

@@ -1,12 +1,12 @@
+import { UpdateHabitatDTO } from 'src/habitat/models/dtos/update-habitat.dto';
+import { IHabitatRepo } from 'src/habitat/models/interface/habitat-repo.interface';
+import { Habitat } from 'src/habitat/models/entity/habitat.entity';
 import {
-  Inject,
-  Injectable,
   InternalServerErrorException,
   NotFoundException,
+  Injectable,
+  Inject,
 } from '@nestjs/common';
-import { UpdateHabitatDTO } from 'src/habitat/models/dtos/update-habitat.dto';
-import { Habitat } from 'src/habitat/models/entity/habitat.entity';
-import { IHabitatRepo } from 'src/habitat/models/interface/habitat-repo.interface';
 
 @Injectable()
 export class UpdateHabitatUseCase {

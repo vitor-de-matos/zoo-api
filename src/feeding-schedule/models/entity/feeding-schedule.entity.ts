@@ -1,11 +1,11 @@
 import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
 import { Species } from 'src/species/models/entity/species.entity';
 import {
-  Column,
-  Entity,
+  PrimaryGeneratedColumn,
   JoinColumn,
   ManyToOne,
-  PrimaryGeneratedColumn,
+  Column,
+  Entity,
 } from 'typeorm';
 
 @Entity('feeding_schedule')

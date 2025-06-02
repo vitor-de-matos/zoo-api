@@ -1,15 +1,15 @@
 import { Controller, Get, Inject, Query } from '@nestjs/common';
+import { FindAllNutritionUseCase } from './find-all-nutrition.use-case';
+import { FindNutritionRecordDTO } from 'src/nutrition/models/dtos/find-nutrition.dto';
+import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
 import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
+  ApiBearerAuth,
   ApiOkResponse,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindAllNutritionUseCase } from './find-all-nutrition.use-case';
-import { FindNutritionRecordDTO } from 'src/nutrition/models/dtos/find-nutrition.dto';
-import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
 
 @ApiTags('Nutrição')
 @ApiBearerAuth('access-token')

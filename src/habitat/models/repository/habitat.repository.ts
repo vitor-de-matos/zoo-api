@@ -1,12 +1,12 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
-import { IHabitatRepo } from '../interface/habitat-repo.interface';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
-import { Habitat } from '../entity/habitat.entity';
-import { InjectRepository } from '@nestjs/typeorm';
 import { FindManyOptions, ILike, Repository } from 'typeorm';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateHabitatDTO } from '../dtos/create-habitat.dto';
-import { FindHabitatDTO } from '../dtos/find-habitat.dto';
 import { UpdateHabitatDTO } from '../dtos/update-habitat.dto';
+import { InjectRepository } from '@nestjs/typeorm';
+import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { FindHabitatDTO } from '../dtos/find-habitat.dto';
+import { IHabitatRepo } from '../interface/habitat-repo.interface';
+import { Habitat } from '../entity/habitat.entity';
 
 @Injectable()
 export class HabitatRepository implements IHabitatRepo {

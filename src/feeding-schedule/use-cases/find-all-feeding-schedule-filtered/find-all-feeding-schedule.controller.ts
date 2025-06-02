@@ -1,15 +1,15 @@
 import { Controller, Get, Inject, Query } from '@nestjs/common';
+import { FindAllFeedingScheduleUseCase } from './find-all-feeding.schedule.use-case';
+import { FindFeedingScheduleDTO } from 'src/feeding-schedule/models/dtos/find-feeding-schedule.dto';
+import { FeedingSchedule } from 'src/feeding-schedule/models/entity/feeding-schedule.entity';
 import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
+  ApiBearerAuth,
   ApiOkResponse,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindAllFeedingScheduleUseCase } from './find-all-feeding.schedule.use-case';
-import { FindFeedingScheduleDTO } from 'src/feeding-schedule/models/dtos/find-feeding-schedule.dto';
-import { FeedingSchedule } from 'src/feeding-schedule/models/entity/feeding-schedule.entity';
 
 @ApiTags('Horario de alimentação')
 @ApiBearerAuth('access-token')

@@ -1,23 +1,23 @@
+import { UpdateAnimalUseCase } from './update-animal.use-case';
+import { UpdateAnimalDTO } from 'src/animal/models/dto/update-animal.dto';
 import {
-  Body,
-  Controller,
-  Inject,
-  NotAcceptableException,
-  Param,
-  Patch,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiBody,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
+  ApiBearerAuth,
   ApiOperation,
+  ApiBody,
   ApiTags,
 } from '@nestjs/swagger';
-import { UpdateAnimalUseCase } from './update-animal.use-case';
-import { UpdateAnimalDTO } from 'src/animal/models/dto/update-animal.dto';
+import {
+  NotAcceptableException,
+  Controller,
+  Inject,
+  Param,
+  Patch,
+  Body,
+} from '@nestjs/common';
 
 @ApiTags('Animal')
 @ApiBearerAuth('access-token')

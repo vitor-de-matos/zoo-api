@@ -1,4 +1,6 @@
+import { Controller, Inject, Get, Query } from '@nestjs/common';
 import { FindAllAnimalUseCase } from './find-all-animal.use-case';
+import { FindAnimalDTO } from 'src/animal/models/dto/find-animal.dto';
 import { Animal } from 'src/animal/models/entity/animal.entity';
 import {
   ApiInternalServerErrorResponse,
@@ -8,8 +10,6 @@ import {
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { Controller, Inject, Get, Query } from '@nestjs/common';
-import { FindAnimalDTO } from 'src/animal/models/dto/find-animal.dto';
 
 @ApiTags('Animal')
 @ApiBearerAuth('access-token')

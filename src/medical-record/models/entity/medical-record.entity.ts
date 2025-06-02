@@ -1,11 +1,11 @@
-import { Animal } from 'src/animal/models/entity/animal.entity';
 import { QuarantineRecord } from 'src/quarentine-record/models/entity/quarentine-record.entity';
+import { Animal } from 'src/animal/models/entity/animal.entity';
 import {
-  Entity,
   PrimaryGeneratedColumn,
-  Column,
-  ManyToOne,
   JoinColumn,
+  ManyToOne,
+  Entity,
+  Column,
 } from 'typeorm';
 
 @Entity('medical_record')

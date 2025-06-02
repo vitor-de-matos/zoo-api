@@ -1,23 +1,23 @@
+import { UpdateHabitatUseCase } from './update-habitat.use-case';
+import { UpdateHabitatDTO } from 'src/habitat/models/dtos/update-habitat.dto';
 import {
-  Body,
-  Controller,
-  Inject,
-  NotAcceptableException,
-  Param,
-  Patch,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiBody,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
+  ApiBearerAuth,
   ApiOperation,
+  ApiBody,
   ApiTags,
 } from '@nestjs/swagger';
-import { UpdateHabitatUseCase } from './update-habitat.use-case';
-import { UpdateHabitatDTO } from 'src/habitat/models/dtos/update-habitat.dto';
+import {
+  NotAcceptableException,
+  Controller,
+  Inject,
+  Param,
+  Patch,
+  Body,
+} from '@nestjs/common';
 
 @ApiTags('Habitate')
 @ApiBearerAuth('access-token')

@@ -1,12 +1,12 @@
 import { ApiPropertyOptional } from '@nestjs/swagger';
+import { PaginationDTO } from 'src/shared/utils/dto/pagination.dto';
 import {
-  IsArray,
-  IsJSON,
-  IsNumber,
   IsOptional,
   IsString,
+  IsNumber,
+  IsArray,
+  IsJSON,
 } from 'class-validator';
-import { PaginationDTO } from 'src/shared/utils/dto/pagination.dto';
 
 export class FindNutritionRecordDTO extends PaginationDTO {
   @ApiPropertyOptional()

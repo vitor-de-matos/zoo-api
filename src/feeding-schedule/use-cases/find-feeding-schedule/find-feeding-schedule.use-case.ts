@@ -1,6 +1,6 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
-import { FeedingSchedule } from 'src/feeding-schedule/models/entity/feeding-schedule.entity';
 import { IFeedingScheduleRepo } from 'src/feeding-schedule/models/interface/feeding-schedule-repo.interface';
+import { FeedingSchedule } from 'src/feeding-schedule/models/entity/feeding-schedule.entity';
 
 @Injectable()
 export class FindFeedingScheduleUseCase {

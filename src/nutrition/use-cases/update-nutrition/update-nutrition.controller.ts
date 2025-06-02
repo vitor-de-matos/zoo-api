@@ -1,23 +1,23 @@
+import { UpdateNutritionUseCase } from './update-nutrition.use-case';
+import { UpdateNutritionDTO } from 'src/nutrition/models/dtos/update-nutrition.dto';
 import {
-  Body,
-  Controller,
-  Inject,
-  NotAcceptableException,
-  Param,
-  Patch,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiBody,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiNotFoundResponse,
+  ApiBearerAuth,
   ApiOkResponse,
   ApiOperation,
+  ApiBody,
   ApiTags,
 } from '@nestjs/swagger';
-import { UpdateNutritionUseCase } from './update-nutrition.use-case';
-import { UpdateNutritionDTO } from 'src/nutrition/models/dtos/update-nutrition.dto';
+import {
+  NotAcceptableException,
+  Controller,
+  Inject,
+  Param,
+  Patch,
+  Body,
+} from '@nestjs/common';
 
 @ApiTags('Nutrição')
 @ApiBearerAuth('access-token')

@@ -1,15 +1,15 @@
 import { Controller, Get, Inject, Query } from '@nestjs/common';
+import { FindAllMedicalRecordUseCase } from './find-all-medical-record.use-case';
+import { FindMedicalRecordDTO } from 'src/medical-record/models/dtos/find-medical-record.dto';
+import { MedicalRecord } from 'src/medical-record/models/entity/medical-record.entity';
 import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
+  ApiBearerAuth,
   ApiOkResponse,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindMedicalRecordDTO } from 'src/medical-record/models/dtos/find-medical-record.dto';
-import { MedicalRecord } from 'src/medical-record/models/entity/medical-record.entity';
-import { FindAllMedicalRecordUseCase } from './find-all-medical-record.use-case';
 
 @ApiTags('Registro medico')
 @ApiBearerAuth('access-token')

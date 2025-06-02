@@ -1,6 +1,6 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
-import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
 import { INutritionRepo } from 'src/nutrition/models/interface/nutrition-repo.interface';
+import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
 
 @Injectable()
 export class FindNutritionUseCase {

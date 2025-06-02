@@ -1,11 +1,11 @@
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  ManyToOne,
-  CreateDateColumn,
-} from 'typeorm';
 import { Animal } from '../../../animal/models/entity/animal.entity';
+import {
+  PrimaryGeneratedColumn,
+  CreateDateColumn,
+  ManyToOne,
+  Entity,
+  Column,
+} from 'typeorm';
 
 @Entity('measurement_records')
 export class MeasurementRecord {

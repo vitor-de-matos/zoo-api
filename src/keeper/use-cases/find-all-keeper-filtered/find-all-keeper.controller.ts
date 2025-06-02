@@ -1,15 +1,15 @@
 import { Controller, Get, Inject, Query } from '@nestjs/common';
+import { FindAllKeeperUseCase } from './find-all-keeper.use-case';
+import { FindKeeperDTO } from 'src/keeper/models/dtos/find-keeper.dto';
+import { Keeper } from 'src/keeper/models/entity/keeper.entity';
 import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
+  ApiBearerAuth,
   ApiOkResponse,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindAllKeeperUseCase } from './find-all-keeper.use-case';
-import { FindKeeperDTO } from 'src/keeper/models/dtos/find-keeper.dto';
-import { Keeper } from 'src/keeper/models/entity/keeper.entity';
 
 @ApiTags('Tratador')
 @ApiBearerAuth('access-token')

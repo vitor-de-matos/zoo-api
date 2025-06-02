@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { FindKeeperDTO } from 'src/keeper/models/dtos/find-keeper.dto';
-import { Keeper } from 'src/keeper/models/entity/keeper.entity';
 import { IKeeperRepo } from 'src/keeper/models/interface/keeper-repo.interface';
+import { Keeper } from 'src/keeper/models/entity/keeper.entity';
 
 @Injectable()
 export class FindAllKeeperUseCase {

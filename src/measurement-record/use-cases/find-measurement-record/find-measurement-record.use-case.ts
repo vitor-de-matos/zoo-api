@@ -1,6 +1,6 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
-import { MeasurementRecord } from 'src/measurement-record/models/entity/measurement-record.entity';
 import { IMeasurementRecordRepo } from 'src/measurement-record/models/interface/measurement-record-repo.interface';
+import { MeasurementRecord } from 'src/measurement-record/models/entity/measurement-record.entity';
 
 @Injectable()
 export class FindMeasurementRecordUseCase {

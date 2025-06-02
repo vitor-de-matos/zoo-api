@@ -1,12 +1,12 @@
+import { UpdateAnimalDTO } from 'src/animal/models/dto/update-animal.dto';
+import { IAnimalRepo } from 'src/animal/models/interface/animal-repo.interface';
+import { Animal } from 'src/animal/models/entity/animal.entity';
 import {
-  Inject,
-  Injectable,
   InternalServerErrorException,
   NotFoundException,
+  Injectable,
+  Inject,
 } from '@nestjs/common';
-import { UpdateAnimalDTO } from 'src/animal/models/dto/update-animal.dto';
-import { Animal } from 'src/animal/models/entity/animal.entity';
-import { IAnimalRepo } from 'src/animal/models/interface/animal-repo.interface';
 
 @Injectable()
 export class UpdateAnimalUseCase {

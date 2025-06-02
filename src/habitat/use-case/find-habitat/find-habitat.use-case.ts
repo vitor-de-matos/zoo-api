@@ -1,6 +1,6 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
-import { Habitat } from 'src/habitat/models/entity/habitat.entity';
 import { IHabitatRepo } from 'src/habitat/models/interface/habitat-repo.interface';
+import { Habitat } from 'src/habitat/models/entity/habitat.entity';
 
 @Injectable()
 export class FindHabitatUseCase {

@@ -1,23 +1,23 @@
+import { UpdateMedicalRecordUseCase } from './update-medical-record.use-case';
+import { UpdateMedicalRecordDTO } from 'src/medical-record/models/dtos/update-medical-record.dto';
 import {
-  Body,
-  Controller,
-  Inject,
-  NotAcceptableException,
-  Param,
-  Patch,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiBody,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
+  ApiBearerAuth,
   ApiOperation,
+  ApiBody,
   ApiTags,
 } from '@nestjs/swagger';
-import { UpdateMedicalRecordUseCase } from './update-medical-record.use-case';
-import { UpdateMedicalRecordDTO } from 'src/medical-record/models/dtos/update-medical-record.dto';
+import {
+  NotAcceptableException,
+  Controller,
+  Inject,
+  Param,
+  Patch,
+  Body,
+} from '@nestjs/common';
 
 @ApiTags('Registro medico')
 @ApiBearerAuth('access-token')

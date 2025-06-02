@@ -1,15 +1,15 @@
+import { FindAllMeasurementRecordUseCase } from './find-all-measurement-record.use-case';
 import { Controller, Get, Inject, Query } from '@nestjs/common';
+import { FindMeasurementRecordDTO } from 'src/measurement-record/models/dtos/find-measurement-record.dto';
+import { MeasurementRecord } from 'src/measurement-record/models/entity/measurement-record.entity';
 import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
+  ApiBearerAuth,
   ApiOkResponse,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindAllMeasurementRecordUseCase } from './find-all-measurement-record.use-case';
-import { FindMeasurementRecordDTO } from 'src/measurement-record/models/dtos/find-measurement-record.dto';
-import { MeasurementRecord } from 'src/measurement-record/models/entity/measurement-record.entity';
 
 @ApiTags('Registro de medidas')
 @ApiBearerAuth('access-token')

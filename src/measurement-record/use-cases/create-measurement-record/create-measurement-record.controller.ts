@@ -1,14 +1,14 @@
+import { CreateMeasurementRecordUseCase } from './create-measutement-record.use-case';
 import { Body, Controller, Inject, Post } from '@nestjs/common';
+import { CreateMeasurementRecordDTO } from 'src/measurement-record/models/dtos/create-measurement-record.dto';
 import {
-  ApiBearerAuth,
-  ApiBody,
-  ApiCreatedResponse,
   ApiInternalServerErrorResponse,
+  ApiCreatedResponse,
+  ApiBearerAuth,
   ApiOperation,
+  ApiBody,
   ApiTags,
 } from '@nestjs/swagger';
-import { CreateMeasurementRecordUseCase } from './create-measutement-record.use-case';
-import { CreateMeasurementRecordDTO } from 'src/measurement-record/models/dtos/create-measurement-record.dto';
 
 @ApiTags('Registro de medidas')
 @ApiBearerAuth('access-token')

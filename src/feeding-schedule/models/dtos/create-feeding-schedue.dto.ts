@@ -1,10 +1,10 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import {
-  IsDate,
+  IsOptional,
   IsNotEmpty,
   IsNumber,
-  IsOptional,
   IsString,
+  IsDate,
 } from 'class-validator';
 
 export class CreateFeedingScheduleDTO {

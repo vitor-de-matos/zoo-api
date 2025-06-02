@@ -1,12 +1,12 @@
+import { UpdateNutritionDTO } from 'src/nutrition/models/dtos/update-nutrition.dto';
+import { INutritionRepo } from 'src/nutrition/models/interface/nutrition-repo.interface';
+import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
 import {
-  Inject,
-  Injectable,
   InternalServerErrorException,
   NotFoundException,
+  Injectable,
+  Inject,
 } from '@nestjs/common';
-import { UpdateNutritionDTO } from 'src/nutrition/models/dtos/update-nutrition.dto';
-import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
-import { INutritionRepo } from 'src/nutrition/models/interface/nutrition-repo.interface';
 
 @Injectable()
 export class UpdateNutritionUseCase {

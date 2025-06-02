@@ -1,5 +1,5 @@
-import { Animal } from 'src/animal/models/entity/animal.entity';
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { Animal } from 'src/animal/models/entity/animal.entity';
 
 @Entity()
 export class Habitat {

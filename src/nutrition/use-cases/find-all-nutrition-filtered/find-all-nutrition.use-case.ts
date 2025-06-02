@@ -1,7 +1,7 @@
-import { Inject, Injectable } from '@nestjs/common';
 import { FindNutritionRecordDTO } from 'src/nutrition/models/dtos/find-nutrition.dto';
-import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
+import { Inject, Injectable } from '@nestjs/common';
 import { INutritionRepo } from 'src/nutrition/models/interface/nutrition-repo.interface';
+import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
 
 @Injectable()
 export class FindAllNutritionUseCase {

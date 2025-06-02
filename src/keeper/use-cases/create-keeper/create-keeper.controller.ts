@@ -1,14 +1,14 @@
 import { Body, Controller, Inject, Post } from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiBody,
-  ApiCreatedResponse,
-  ApiInternalServerErrorResponse,
-  ApiOperation,
-  ApiTags,
-} from '@nestjs/swagger';
 import { CreateKeeperUseCase } from './create-keeper.use-case';
 import { CreateKeeperDTO } from 'src/keeper/models/dtos/create-keeper.dto';
+import {
+  ApiInternalServerErrorResponse,
+  ApiCreatedResponse,
+  ApiBearerAuth,
+  ApiOperation,
+  ApiTags,
+  ApiBody,
+} from '@nestjs/swagger';
 
 @ApiTags('Tratador')
 @ApiBearerAuth('access-token')

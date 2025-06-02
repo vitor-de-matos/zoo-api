@@ -1,12 +1,12 @@
-import { Animal } from 'src/animal/models/entity/animal.entity';
 import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
+import { Animal } from 'src/animal/models/entity/animal.entity';
 import {
   PrimaryGeneratedColumn,
   ManyToMany,
+  OneToMany,
   JoinTable,
   Column,
   Entity,
-  OneToMany,
 } from 'typeorm';
 
 @Entity()

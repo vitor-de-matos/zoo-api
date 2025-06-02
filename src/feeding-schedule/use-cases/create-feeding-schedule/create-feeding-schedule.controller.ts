@@ -1,14 +1,14 @@
 import { Body, Controller, Inject, Post } from '@nestjs/common';
+import { CreateFeedingScheduleUseCase } from './create-feeding-schedule.use-case';
+import { CreateFeedingScheduleDTO } from 'src/feeding-schedule/models/dtos/create-feeding-schedue.dto';
 import {
-  ApiBearerAuth,
-  ApiBody,
-  ApiCreatedResponse,
   ApiInternalServerErrorResponse,
+  ApiCreatedResponse,
+  ApiBearerAuth,
   ApiOperation,
+  ApiBody,
   ApiTags,
 } from '@nestjs/swagger';
-import { CreateFeedingScheduleDTO } from 'src/feeding-schedule/models/dtos/create-feeding-schedue.dto';
-import { CreateFeedingScheduleUseCase } from './create-feeding-schedule.use-case';
 
 @ApiTags('Horario de alimentação')
 @ApiBearerAuth('access-token')

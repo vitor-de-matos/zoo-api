@@ -1,13 +1,13 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
-import { IMedicalRecordRepo } from '../interface/medical-record-repo.interface';
-import { InjectRepository } from '@nestjs/typeorm';
-import { MedicalRecord } from '../entity/medical-record.entity';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
 import { Between, FindManyOptions, ILike, Repository } from 'typeorm';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateMedicalRecordDTO } from '../dtos/create-medical-record.dto';
+import { UpdateMedicalRecordDTO } from '../dtos/update-medical-record.dto';
 import { FindMedicalRecordDTO } from '../dtos/find-medical-record.dto';
 import { endOfDay, startOfDay } from 'date-fns';
-import { UpdateMedicalRecordDTO } from '../dtos/update-medical-record.dto';
+import { IMedicalRecordRepo } from '../interface/medical-record-repo.interface';
+import { InjectRepository } from '@nestjs/typeorm';
+import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { MedicalRecord } from '../entity/medical-record.entity';
 
 @Injectable()
 export class MedicalRecordRepository implements IMedicalRecordRepo {

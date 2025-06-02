@@ -1,14 +1,14 @@
 import { Body, Controller, Inject, Post } from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiBody,
-  ApiCreatedResponse,
-  ApiInternalServerErrorResponse,
-  ApiOperation,
-  ApiTags,
-} from '@nestjs/swagger';
 import { CreateHabitatUseCase } from './create-habitat.use-case';
 import { CreateHabitatDTO } from 'src/habitat/models/dtos/create-habitat.dto';
+import {
+  ApiInternalServerErrorResponse,
+  ApiCreatedResponse,
+  ApiBearerAuth,
+  ApiOperation,
+  ApiBody,
+  ApiTags,
+} from '@nestjs/swagger';
 
 @ApiTags('Habitate')
 @ApiBearerAuth('access-token')

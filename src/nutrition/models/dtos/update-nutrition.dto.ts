@@ -1,11 +1,10 @@
 import { ApiPropertyOptional } from '@nestjs/swagger';
 import {
+  IsOptional,
+  IsNumber,
+  IsString,
   IsArray,
   IsJSON,
-  IsNotEmpty,
-  IsNumber,
-  IsOptional,
-  IsString,
 } from 'class-validator';
 
 export class UpdateNutritionDTO {

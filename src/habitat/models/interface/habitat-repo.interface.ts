@@ -1,6 +1,6 @@
 import { CreateHabitatDTO } from '../dtos/create-habitat.dto';
-import { FindHabitatDTO } from '../dtos/find-habitat.dto';
 import { UpdateHabitatDTO } from '../dtos/update-habitat.dto';
+import { FindHabitatDTO } from '../dtos/find-habitat.dto';
 import { Habitat } from '../entity/habitat.entity';
 
 export interface IHabitatRepo {

@@ -1,21 +1,21 @@
+import { FindKeeperUseCase } from './find-keeper.use-case';
+import { Keeper } from 'src/keeper/models/entity/keeper.entity';
 import {
-  Controller,
-  Get,
-  Inject,
-  NotAcceptableException,
-  Param,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
+  ApiBearerAuth,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindKeeperUseCase } from './find-keeper.use-case';
-import { Keeper } from 'src/keeper/models/entity/keeper.entity';
+import {
+  NotAcceptableException,
+  Controller,
+  Inject,
+  Param,
+  Get,
+} from '@nestjs/common';
 
 @ApiTags('Tratador')
 @ApiBearerAuth('access-token')

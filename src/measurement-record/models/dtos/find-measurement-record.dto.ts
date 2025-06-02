@@ -1,5 +1,5 @@
-import { ApiPropertyOptional } from '@nestjs/swagger';
 import { IsNumber, IsOptional } from 'class-validator';
+import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PaginationDTO } from 'src/shared/utils/dto/pagination.dto';
 
 export class FindMeasurementRecordDTO extends PaginationDTO {

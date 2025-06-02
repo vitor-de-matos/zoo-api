@@ -1,23 +1,23 @@
+import { UpdateFeedingScheduleUseCase } from './update-feeding-schedule.use-case';
+import { UpdateFeedingScheduleDTO } from 'src/feeding-schedule/models/dtos/update-feeding-schedule.dto';
 import {
-  ApiBearerAuth,
-  ApiBody,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
+  ApiBearerAuth,
   ApiOperation,
+  ApiBody,
   ApiTags,
 } from '@nestjs/swagger';
-import { UpdateFeedingScheduleUseCase } from './update-feeding-schedule.use-case';
 import {
-  Body,
+  NotAcceptableException,
   Controller,
   Inject,
-  NotAcceptableException,
   Param,
   Patch,
+  Body,
 } from '@nestjs/common';
-import { UpdateFeedingScheduleDTO } from 'src/feeding-schedule/models/dtos/update-feeding-schedule.dto';
 
 @ApiTags('Horario de alimentação')
 @ApiBearerAuth('access-token')

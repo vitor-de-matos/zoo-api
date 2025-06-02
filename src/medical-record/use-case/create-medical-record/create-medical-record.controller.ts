@@ -1,14 +1,14 @@
 import { Body, Controller, Inject, Post } from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiBody,
-  ApiCreatedResponse,
-  ApiInternalServerErrorResponse,
-  ApiOperation,
-  ApiTags,
-} from '@nestjs/swagger';
 import { CreateMedicalRecordUseCase } from './create-medical-record.use-case';
 import { CreateMedicalRecordDTO } from 'src/medical-record/models/dtos/create-medical-record.dto';
+import {
+  ApiInternalServerErrorResponse,
+  ApiCreatedResponse,
+  ApiBearerAuth,
+  ApiOperation,
+  ApiBody,
+  ApiTags,
+} from '@nestjs/swagger';
 
 @ApiTags('Registro medico')
 @ApiBearerAuth('access-token')

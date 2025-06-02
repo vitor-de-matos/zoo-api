@@ -1,21 +1,21 @@
+import { FindNutritionUseCase } from './find-nutrition.use-case';
+import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
 import {
-  Controller,
-  Get,
-  Inject,
-  NotAcceptableException,
-  Param,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
+  ApiBearerAuth,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindNutritionUseCase } from './find-nutrition.use-case';
-import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
+import {
+  NotAcceptableException,
+  Controller,
+  Inject,
+  Param,
+  Get,
+} from '@nestjs/common';
 
 @ApiTags('Nutrição')
 @ApiBearerAuth('access-token')

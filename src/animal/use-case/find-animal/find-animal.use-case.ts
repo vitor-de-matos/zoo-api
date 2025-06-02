@@ -1,6 +1,6 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
-import { Animal } from 'src/animal/models/entity/animal.entity';
 import { IAnimalRepo } from 'src/animal/models/interface/animal-repo.interface';
+import { Animal } from 'src/animal/models/entity/animal.entity';
 
 @Injectable()
 export class FindAnimalUseCase {
