@@ -38,6 +38,6 @@ export class DeleteSpeciesController {
       throw new NotAcceptableException({ message: 'Id deve ser um numero' });
     }
     await this.specieService.delete(id);
-    return 'Especie removida com sucesso';
+    return 'Especie removido com sucesso';
   }
 }
