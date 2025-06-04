@@ -9,7 +9,7 @@ import { UpdateHabitatUseCase } from './use-case/update-habitat/update-habitat.u
 import { DeleteHabitatUseCase } from './use-case/delete-habitat/delete-habitat.use-case';
 import { FindHabitatUseCase } from './use-case/find-habitat/find-habitat.use-case';
 import { HabitatRepository } from './models/repository/habitat.repository';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SharedModule } from 'src/shared/shared.module';
 import { Habitat } from './models/entity/habitat.entity';

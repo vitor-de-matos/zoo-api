@@ -9,7 +9,7 @@ import { UpdateKeeperUseCase } from './use-cases/update-keeper/update-keeper.use
 import { DeleteKeeperUseCase } from './use-cases/delete-keeper/delete-keeper.use-case';
 import { FindKeeperUseCase } from './use-cases/find-keeper/find-keeper.use-case';
 import { KeeperRepository } from './models/repository/keeper.repository';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SharedModule } from 'src/shared/shared.module';
 import { Keeper } from './models/entity/keeper.entity';

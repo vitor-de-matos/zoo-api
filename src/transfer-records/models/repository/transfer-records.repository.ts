@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { TransferRecords } from '../entity/transfer-records.entity';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { ITransferRecordsRepo } from '../interface/transfer-records.interface';
 import { Between, FindManyOptions, ILike, Repository } from 'typeorm';
 import { CreateTransferRecordsDTO } from '../dtos/create-transfer-records.dto';

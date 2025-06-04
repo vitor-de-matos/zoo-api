@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { ISpeciesRepo } from '../interface/species-repo.interface';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Species } from '../entity/species.entity';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { FindManyOptions, ILike, Repository } from 'typeorm';
 import { CreateSpeciesDTO } from '../dtos/create-species.dto';
 import { FindSpeciesDTO } from '../dtos/find-species.dto';

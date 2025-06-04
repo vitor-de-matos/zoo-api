@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UpdateAnimalDTO } from '../dto/update-animal.dto';
 import { CreateAnimalDTO } from '../dto/create-animal.dto';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { FindAnimalDTO } from '../dto/find-animal.dto';
 import { IAnimalRepo } from '../interface/animal-repo.interface';
 import { Animal } from '../entity/animal.entity';

@@ -10,7 +10,7 @@ import { DeleteQuarentineRecordUseCase } from './use-cases/delete-quarentine-rec
 import { FindQuarentineRecordUseCase } from './use-cases/find-quarentine-record/find-quarentine-record.use-case';
 import { QuarantineRecordRepository } from './models/repository/quarentine-record.repository';
 import { QuarantineRecord } from './models/entity/quarentine-record.entity';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SharedModule } from 'src/shared/shared.module';
 import { Module } from '@nestjs/common';

@@ -9,7 +9,7 @@ import { UpdateAnimalUseCase } from './use-case/update-animal/update-animal.use-
 import { DeleteAnimalUseCase } from './use-case/delete-animal/delete-animal.use-case';
 import { FindAnimalUseCase } from './use-case/find-animal/find-animal.use-case';
 import { AnimalRepository } from './models/repository/animal.repository';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SharedModule } from 'src/shared/shared.module';
 import { Animal } from './models/entity/animal.entity';

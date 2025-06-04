@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Species } from './models/entity/species.entity';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { SharedModule } from 'src/shared/shared.module';
 import { CreateSpeciesController } from './use-cases/create-specie/create-specie.controller';
 import { FindSpeciesController } from './use-cases/find-specie/find-specie.controller';

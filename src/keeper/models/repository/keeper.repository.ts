@@ -3,7 +3,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreateKeeperDTO } from '../dtos/create-keeper.dto';
 import { UpdateKeeperDTO } from '../dtos/update-keeper.dto';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { FindKeeperDTO } from '../dtos/find-keeper.dto';
 import { IKeeperRepo } from '../interface/keeper-repo.interface';
 import { Keeper } from '../entity/keeper.entity';

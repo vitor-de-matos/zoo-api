@@ -6,7 +6,7 @@ import { FindMedicalRecordDTO } from '../dtos/find-medical-record.dto';
 import { endOfDay, startOfDay } from 'date-fns';
 import { IMedicalRecordRepo } from '../interface/medical-record-repo.interface';
 import { InjectRepository } from '@nestjs/typeorm';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { MedicalRecord } from '../entity/medical-record.entity';
 
 @Injectable()

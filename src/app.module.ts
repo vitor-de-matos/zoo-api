@@ -12,9 +12,11 @@ import { NutritionModule } from './nutrition/nutrition.module';
 import { QuarentineRecordModule } from './quarentine-record/quarentine-record.module';
 import { SpeciesModule } from './species/species.module';
 import { TransferRecordsModule } from './transfer-records/transfer-records.module';
+import { ScheduleModule } from '@nestjs/schedule';
 
 @Module({
   imports: [
+    ScheduleModule.forRoot(),
     ConfigModule.forRoot({
       isGlobal: true,
       load: [config],

@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { IMeasurementRecordRepo } from '../interface/measurement-record-repo.interface';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MeasurementRecord } from '../entity/measurement-record.entity';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import {
   Between,
   FindManyOptions,

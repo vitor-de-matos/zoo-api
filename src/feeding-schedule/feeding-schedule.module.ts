@@ -10,7 +10,7 @@ import { UpdateFeedingScheduleUseCase } from './use-cases/update-feeding-schedul
 import { FindFeedingScheduleUseCase } from './use-cases/find-feeding-schedule/find-feeding-schedule.use-case';
 import { FeedingScheduleRepository } from './models/repository/feeding-schedule.repository';
 import { FeedingSchedule } from './models/entity/feeding-schedule.entity';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SharedModule } from 'src/shared/shared.module';
 import { Module } from '@nestjs/common';

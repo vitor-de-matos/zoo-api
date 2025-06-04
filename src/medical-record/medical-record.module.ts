@@ -9,7 +9,7 @@ import { UpdateMedicalRecordUseCase } from './use-case/update-medical-record/upd
 import { DeleteMedicalRecordUseCase } from './use-case/delete-medical-record/delete-medical-record.use-case';
 import { FindMedicalRecordUseCase } from './use-case/find-medical-record/find-medical-record.use-case';
 import { MedicalRecordRepository } from './models/repository/medical-record.repository';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { MedicalRecord } from './models/entity/medical-record.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SharedModule } from 'src/shared/shared.module';

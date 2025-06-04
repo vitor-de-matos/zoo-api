@@ -3,7 +3,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateHabitatDTO } from '../dtos/create-habitat.dto';
 import { UpdateHabitatDTO } from '../dtos/update-habitat.dto';
 import { InjectRepository } from '@nestjs/typeorm';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { FindHabitatDTO } from '../dtos/find-habitat.dto';
 import { IHabitatRepo } from '../interface/habitat-repo.interface';
 import { Habitat } from '../entity/habitat.entity';

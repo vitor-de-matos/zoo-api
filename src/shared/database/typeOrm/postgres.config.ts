@@ -16,5 +16,6 @@ export const typeOrmConfigPostgres = (
   database: configService.get<string>('dbPostgresDatabase'),
   schema: configService.get<string>('dbPostgresSchema'),
   entities: [__dirname + './../../../**/*.entity.{js,ts}'],
-  synchronize: false,
+  synchronize: true,
+  autoLoadEntities: true,
 });

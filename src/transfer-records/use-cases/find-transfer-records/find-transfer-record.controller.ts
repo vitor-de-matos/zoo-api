@@ -14,7 +14,7 @@ import {
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindTransferRecordUseCase } from './find-transfer-record.use-case';
+import { FindTransferRecordsUseCase } from './find-transfer-record.use-case';
 import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
 
 @ApiTags('Registro de transferencia')
@@ -22,8 +22,8 @@ import { TransferRecords } from 'src/transfer-records/models/entity/transfer-rec
 @Controller('transfer-records')
 export class FindTransferRecordsController {
   constructor(
-    @Inject(FindTransferRecordUseCase)
-    private readonly transferRecordService: FindTransferRecordUseCase,
+    @Inject(FindTransferRecordsUseCase)
+    private readonly transferRecordService: FindTransferRecordsUseCase,
   ) {}
 
   @ApiOperation({ summary: 'Buscar registro de transferencia' })

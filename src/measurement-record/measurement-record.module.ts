@@ -10,7 +10,7 @@ import { DeleteMeasurementRecordUseCase } from './use-cases/delete-measurement-r
 import { FindMeasurementRecordUseCase } from './use-cases/find-measurement-record/find-measurement-record.use-case';
 import { MeasurementRecordRepository } from './models/repository/measurement-record.repository';
 import { MeasurementRecord } from './models/entity/measurement-record.entity';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SharedModule } from 'src/shared/shared.module';
 import { Module } from '@nestjs/common';

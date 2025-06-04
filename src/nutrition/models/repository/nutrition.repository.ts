@@ -5,7 +5,7 @@ import { CreateNutritionDTO } from '../dtos/create-nutrition.dto';
 import { UpdateNutritionDTO } from '../dtos/update-nutrition.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { INutritionRepo } from '../interface/nutrition-repo.interface';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { Nutrition } from '../entity/nutrition.entity';
 
 @Injectable()

@@ -3,7 +3,7 @@ import { TransferRecords } from 'src/transfer-records/models/entity/transfer-rec
 import { ITransferRecordsRepo } from 'src/transfer-records/models/interface/transfer-records.interface';
 
 @Injectable()
-export class FindTransferRecordUseCase {
+export class FindTransferRecordsUseCase {
   constructor(
     @Inject('ITransferRecordsRepo')
     private readonly specieRepository: ITransferRecordsRepo,

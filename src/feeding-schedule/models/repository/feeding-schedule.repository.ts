@@ -6,7 +6,7 @@ import { FindFeedingScheduleDTO } from '../dtos/find-feeding-schedule.dto';
 import { IFeedingScheduleRepo } from '../interface/feeding-schedule-repo.interface';
 import { InjectRepository } from '@nestjs/typeorm';
 import { FeedingSchedule } from '../entity/feeding-schedule.entity';
-import { DB_PG_DATABASE } from 'src/shared/database/postgres.config';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { startOfDay } from 'date-fns';
 
 @Injectable()
