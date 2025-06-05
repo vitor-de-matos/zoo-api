@@ -1,3 +1,4 @@
+import { Animal } from 'src/animal/models/entity/animal.entity';
 import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
 import { Species } from 'src/species/models/entity/species.entity';
 import {
@@ -19,9 +20,9 @@ export class FeedingSchedule {
   @Column({ name: 'notes', type: 'varchar', nullable: true })
   notes?: string;
 
-  @ManyToOne(() => Species, (species) => species.feedingSchedule)
-  @JoinColumn({ name: 'id_species' })
-  species: Species;
+  @ManyToOne(() => Animal, (animal) => animal.feedingSchedule)
+  @JoinColumn({ name: 'id_animal' })
+  animal: Animal;
 
   @ManyToOne(() => Nutrition, (nutrition) => nutrition.feedingSchedules)
   @JoinColumn({ name: 'id_nutrition' })

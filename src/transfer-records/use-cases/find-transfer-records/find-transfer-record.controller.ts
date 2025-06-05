@@ -1,21 +1,21 @@
+import { FindTransferRecordsUseCase } from './find-transfer-record.use-case';
+import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
 import {
-  Controller,
-  Get,
-  Inject,
-  NotAcceptableException,
-  Param,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
+  ApiBearerAuth,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindTransferRecordsUseCase } from './find-transfer-record.use-case';
-import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
+import {
+  NotAcceptableException,
+  Controller,
+  Inject,
+  Param,
+  Get,
+} from '@nestjs/common';
 
 @ApiTags('Registro de transferencia')
 @ApiBearerAuth('access-token')

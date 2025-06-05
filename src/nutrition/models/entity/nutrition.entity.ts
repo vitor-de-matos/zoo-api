@@ -1,5 +1,4 @@
 import { FeedingSchedule } from 'src/feeding-schedule/models/entity/feeding-schedule.entity';
-import { Animal } from 'src/animal/models/entity/animal.entity';
 import {
   PrimaryGeneratedColumn,
   JoinColumn,
@@ -8,6 +7,7 @@ import {
   Column,
   Entity,
 } from 'typeorm';
+import { Species } from 'src/species/models/entity/species.entity';
 
 @Entity('nutrition')
 export class Nutrition {
@@ -29,9 +29,9 @@ export class Nutrition {
   @Column({ name: 'notes', type: 'varchar', nullable: true })
   notes?: string;
 
-  @ManyToOne(() => Animal, (animal) => animal.nutritions)
-  @JoinColumn({ name: 'id_animal' })
-  animal: Animal;
+  @ManyToOne(() => Species, (species) => species.nutrition)
+  @JoinColumn({ name: 'id_species' })
+  species: Species;
 
   @OneToMany(() => FeedingSchedule, (schedule) => schedule.nutrition)
   feedingSchedules: FeedingSchedule[];

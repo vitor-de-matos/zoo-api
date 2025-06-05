@@ -1,14 +1,14 @@
 import { Body, Controller, Inject, Post } from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiBody,
-  ApiCreatedResponse,
-  ApiInternalServerErrorResponse,
-  ApiOperation,
-  ApiTags,
-} from '@nestjs/swagger';
 import { CreateTransferRecordsUseCase } from './create-transfer-record.use-case';
 import { CreateTransferRecordsDTO } from 'src/transfer-records/models/dtos/create-transfer-records.dto';
+import {
+  ApiInternalServerErrorResponse,
+  ApiCreatedResponse,
+  ApiBearerAuth,
+  ApiOperation,
+  ApiTags,
+  ApiBody,
+} from '@nestjs/swagger';
 
 @ApiTags('Registro de transferencia')
 @ApiBearerAuth('access-token')

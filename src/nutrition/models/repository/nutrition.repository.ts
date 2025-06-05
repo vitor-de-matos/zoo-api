@@ -55,7 +55,7 @@ export class NutritionRepository implements INutritionRepo {
             skip: (filters.page - 1) * filters.quantity,
           }
         : {}),
-      relations: { animal: true },
+      relations: { species: true },
     };
 
     const [data, totalItems] = await this.repository.findAndCount(queryOptions);
@@ -70,7 +70,7 @@ export class NutritionRepository implements INutritionRepo {
   async findById(id: number): Promise<Nutrition | undefined> {
     const nutrition = await this.repository.findOne({
       where: { id: id },
-      relations: { animal: true },
+      relations: { species: true },
     });
     if (!nutrition) {
       throw new NotFoundException({

@@ -1,6 +1,6 @@
 import { CreateTransferRecordsDTO } from '../dtos/create-transfer-records.dto';
-import { FindTransferRecordsDTO } from '../dtos/find-transfer-records.dto';
 import { UpdateTransferRecordsDTO } from '../dtos/update-transfer-records.dto';
+import { FindTransferRecordsDTO } from '../dtos/find-transfer-records.dto';
 import { TransferRecords } from '../entity/transfer-records.entity';
 
 export interface ITransferRecordsRepo {

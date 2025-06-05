@@ -44,7 +44,7 @@ export class FeedingScheduleRepository implements IFeedingScheduleRepo {
             skip: (filters.page - 1) * filters.quantity,
           }
         : {}),
-      relations: { nutrition: true, species: true },
+      relations: { nutrition: true, animal: true },
     };
 
     const [data, totalItems] = await this.repository.findAndCount(queryOptions);
@@ -59,7 +59,7 @@ export class FeedingScheduleRepository implements IFeedingScheduleRepo {
   async findById(id: number): Promise<FeedingSchedule | undefined> {
     const feedingSchedule = await this.repository.findOne({
       where: { id: id },
-      relations: { nutrition: true, species: true },
+      relations: { nutrition: true, animal: true },
     });
     if (!feedingSchedule) {
       throw new NotFoundException({

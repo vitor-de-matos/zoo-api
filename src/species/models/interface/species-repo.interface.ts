@@ -1,6 +1,6 @@
 import { CreateSpeciesDTO } from '../dtos/create-species.dto';
-import { FindSpeciesDTO } from '../dtos/find-species.dto';
 import { UpdateSpeciesDTO } from '../dtos/update-species.dto';
+import { FindSpeciesDTO } from '../dtos/find-species.dto';
 import { Species } from '../entity/species.entity';
 
 export interface ISpeciesRepo {

@@ -1,6 +1,6 @@
-import { Animal } from 'src/animal/models/entity/animal.entity';
-import { FeedingSchedule } from 'src/feeding-schedule/models/entity/feeding-schedule.entity';
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { Animal } from 'src/animal/models/entity/animal.entity';
+import { Nutrition } from 'src/nutrition/models/entity/nutrition.entity';
 @Entity()
 export class Species {
   @PrimaryGeneratedColumn()
@@ -15,9 +15,6 @@ export class Species {
   @OneToMany(() => Animal, (animal) => animal.species)
   animals: Animal[];
 
-  @OneToMany(
-    () => FeedingSchedule,
-    (feedingSchedule) => feedingSchedule.species,
-  )
-  feedingSchedule: FeedingSchedule[];
+  @OneToMany(() => Nutrition, (nutrition) => nutrition.species)
+  nutrition: Nutrition[];
 }

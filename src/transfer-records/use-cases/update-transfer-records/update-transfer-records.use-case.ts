@@ -1,12 +1,12 @@
+import { UpdateTransferRecordsDTO } from 'src/transfer-records/models/dtos/update-transfer-records.dto';
+import { ITransferRecordsRepo } from 'src/transfer-records/models/interface/transfer-records.interface';
+import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
 import {
-  Inject,
-  Injectable,
   InternalServerErrorException,
   NotFoundException,
+  Injectable,
+  Inject,
 } from '@nestjs/common';
-import { UpdateTransferRecordsDTO } from 'src/transfer-records/models/dtos/update-transfer-records.dto';
-import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
-import { ITransferRecordsRepo } from 'src/transfer-records/models/interface/transfer-records.interface';
 
 @Injectable()
 export class UpdateTransferRecordsUseCase {

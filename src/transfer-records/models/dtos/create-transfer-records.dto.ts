@@ -1,10 +1,10 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import {
-  IsDate,
   IsNotEmpty,
-  IsNumber,
   IsOptional,
+  IsNumber,
   IsString,
+  IsDate,
 } from 'class-validator';
 
 export class CreateTransferRecordsDTO {

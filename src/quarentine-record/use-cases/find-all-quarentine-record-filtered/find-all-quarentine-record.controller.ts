@@ -1,15 +1,15 @@
+import { FindAllQuarentineRecordUseCase } from './find-all-quarentine-record.use-case';
 import { Controller, Get, Inject, Query } from '@nestjs/common';
+import { FindQuarentineRecordDTO } from 'src/quarentine-record/models/dtos/find-quarentine-record.dto';
+import { QuarantineRecord } from 'src/quarentine-record/models/entity/quarentine-record.entity';
 import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
   ApiOkResponse,
+  ApiBearerAuth,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindAllQuarentineRecordUseCase } from './find-all-quarentine-record.use-case';
-import { FindQuarentineRecordDTO } from 'src/quarentine-record/models/dtos/find-quarentine-record.dto';
-import { QuarantineRecord } from 'src/quarentine-record/models/entity/quarentine-record.entity';
 
 @ApiTags('Registro de quarentena')
 @ApiBearerAuth('access-token')

@@ -1,7 +1,7 @@
-import { Inject, Injectable } from '@nestjs/common';
 import { FindTransferRecordsDTO } from 'src/transfer-records/models/dtos/find-transfer-records.dto';
-import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
 import { ITransferRecordsRepo } from 'src/transfer-records/models/interface/transfer-records.interface';
+import { Inject, Injectable } from '@nestjs/common';
+import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
 
 @Injectable()
 export class FindAllTransferRecordsUseCase {

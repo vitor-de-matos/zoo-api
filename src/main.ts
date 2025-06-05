@@ -1,13 +1,13 @@
+import { GlobalExceptionFilter } from './shared/filters/global-exception.filter';
+import { ConfigService } from '@nestjs/config';
+import { SwaggerModule } from '@nestjs/swagger';
+import { CONFIG_PIPES } from './shared/config/pipes.config';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { ConfigService } from '@nestjs/config';
-import { GlobalExceptionFilter } from './shared/filters/global-exception.filter';
-import { SwaggerModule } from '@nestjs/swagger';
 import {
-  SWAGGER_CONFIG,
   SWAGGER_CUSTOM_OPTIONS,
+  SWAGGER_CONFIG,
 } from './shared/config/swagger.config';
-import { CONFIG_PIPES } from './shared/config/pipes.config';
 import * as express from 'express';
 
 async function bootstrap() {

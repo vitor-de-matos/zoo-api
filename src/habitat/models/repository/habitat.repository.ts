@@ -28,7 +28,7 @@ export class HabitatRepository implements IHabitatRepo {
   }> {
     const queryOptions: FindManyOptions<Habitat> = {
       where: {
-        ...(filters.name && { notes: ILike(`%${filters.name}%`) }),
+        ...(filters.name && { name: ILike(`%${filters.name}%`) }),
         ...(filters.environmentType && {
           environmentType: filters.environmentType,
         }),

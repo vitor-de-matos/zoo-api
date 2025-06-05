@@ -13,6 +13,8 @@ import { QuarentineRecordModule } from './quarentine-record/quarentine-record.mo
 import { SpeciesModule } from './species/species.module';
 import { TransferRecordsModule } from './transfer-records/transfer-records.module';
 import { ScheduleModule } from '@nestjs/schedule';
+import { UserLoginModule } from './users/user.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -23,6 +25,7 @@ import { ScheduleModule } from '@nestjs/schedule';
       envFilePath: [__dirname + '/../.env'],
     }),
     SharedModule,
+    AuthModule,
     AnimalModule,
     FeedingScheduleModule,
     HabitatModule,
@@ -33,6 +36,7 @@ import { ScheduleModule } from '@nestjs/schedule';
     QuarentineRecordModule,
     SpeciesModule,
     TransferRecordsModule,
+    UserLoginModule,
   ],
   controllers: [],
   providers: [],

@@ -1,5 +1,5 @@
-import { ApiPropertyOptional } from '@nestjs/swagger';
 import { IsDate, IsNumber, IsOptional, IsString } from 'class-validator';
+import { ApiPropertyOptional } from '@nestjs/swagger';
 
 export class UpdateTransferRecordsDTO {
   @ApiPropertyOptional()

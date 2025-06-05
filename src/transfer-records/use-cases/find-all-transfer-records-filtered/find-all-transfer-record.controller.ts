@@ -1,15 +1,15 @@
+import { Controller, Get, Inject, Query } from '@nestjs/common';
+import { FindAllTransferRecordsUseCase } from './find-all-transfer-record.use-case';
+import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
+import { FindSpeciesDTO } from 'src/species/models/dtos/find-species.dto';
 import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotAcceptableResponse,
+  ApiBearerAuth,
   ApiOkResponse,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { FindSpeciesDTO } from 'src/species/models/dtos/find-species.dto';
-import { FindAllTransferRecordsUseCase } from './find-all-transfer-record.use-case';
-import { Controller, Get, Inject, Query } from '@nestjs/common';
-import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
 
 @ApiTags('Registro de transferencia')
 @ApiBearerAuth('access-token')

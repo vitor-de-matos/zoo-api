@@ -1,6 +1,6 @@
 import { CreateQuarentineRecordDTO } from '../dtos/create-quarentine-record.dto';
-import { FindQuarentineRecordDTO } from '../dtos/find-quarentine-record.dto';
 import { UpdateQuarentineRecordDTO } from '../dtos/update-quarentine-record.dto';
+import { FindQuarentineRecordDTO } from '../dtos/find-quarentine-record.dto';
 import { QuarantineRecord } from '../entity/quarentine-record.entity';
 
 export interface IQuarentineRecordRepo {

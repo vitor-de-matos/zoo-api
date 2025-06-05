@@ -11,7 +11,7 @@ export const SWAGGER_CONFIG = new DocumentBuilder()
       name: 'Authorization',
       in: 'header',
     },
-    'acess-token',
+    'access-token',
   )
   .build();
 

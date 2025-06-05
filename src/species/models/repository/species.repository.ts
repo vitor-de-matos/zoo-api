@@ -1,12 +1,12 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
-import { ISpeciesRepo } from '../interface/species-repo.interface';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Species } from '../entity/species.entity';
-import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
 import { FindManyOptions, ILike, Repository } from 'typeorm';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateSpeciesDTO } from '../dtos/create-species.dto';
-import { FindSpeciesDTO } from '../dtos/find-species.dto';
 import { UpdateSpeciesDTO } from '../dtos/update-species.dto';
+import { InjectRepository } from '@nestjs/typeorm';
+import { DB_PG_DATABASE } from 'src/shared/database/typeOrm/postgres.config';
+import { FindSpeciesDTO } from '../dtos/find-species.dto';
+import { ISpeciesRepo } from '../interface/species-repo.interface';
+import { Species } from '../entity/species.entity';
 
 @Injectable()
 export class SpeciesRepository implements ISpeciesRepo {
@@ -41,7 +41,7 @@ export class SpeciesRepository implements ISpeciesRepo {
             skip: (filters.page - 1) * filters.quantity,
           }
         : {}),
-      relations: { animals: true, feedingSchedule: true },
+      relations: { animals: true, nutrition: true },
     };
 
     const [data, totalItems] = await this.repository.findAndCount(queryOptions);
@@ -56,7 +56,7 @@ export class SpeciesRepository implements ISpeciesRepo {
   async findById(id: number): Promise<Species | undefined> {
     const species = await this.repository.findOne({
       where: { id: id },
-      relations: { animals: true, feedingSchedule: true },
+      relations: { animals: true, nutrition: true },
     });
     if (!species) {
       throw new NotFoundException({

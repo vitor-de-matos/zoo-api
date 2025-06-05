@@ -1,6 +1,6 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
-import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
 import { ITransferRecordsRepo } from 'src/transfer-records/models/interface/transfer-records.interface';
+import { TransferRecords } from 'src/transfer-records/models/entity/transfer-records.entity';
 
 @Injectable()
 export class FindTransferRecordsUseCase {

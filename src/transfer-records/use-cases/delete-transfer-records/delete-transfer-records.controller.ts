@@ -1,19 +1,19 @@
+import { DeleteTransferRecordsUseCase } from './delete-transfer-records.use-case';
 import {
-  Controller,
-  Delete,
-  Inject,
-  NotAcceptableException,
-  Param,
-} from '@nestjs/common';
-import {
-  ApiBearerAuth,
   ApiInternalServerErrorResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
+  ApiBearerAuth,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
-import { DeleteTransferRecordsUseCase } from './delete-transfer-records.use-case';
+import {
+  NotAcceptableException,
+  Controller,
+  Delete,
+  Inject,
+  Param,
+} from '@nestjs/common';
 
 @ApiTags('Registro de transferencia')
 @ApiBearerAuth('access-token')

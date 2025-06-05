@@ -19,7 +19,7 @@ export class CreateAnimalController {
     private readonly animalService: CreateAnimalUseCase,
   ) {}
 
-  @ApiOperation({ summary: 'Adicionar banner' })
+  @ApiOperation({ summary: 'Adicionar animal' })
   @ApiBody({ type: CreateAnimalDTO })
   @ApiCreatedResponse({ type: Number })
   @ApiInternalServerErrorResponse({

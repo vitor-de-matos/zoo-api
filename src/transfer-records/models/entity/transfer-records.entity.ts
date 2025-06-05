@@ -1,13 +1,13 @@
 import { Animal } from 'src/animal/models/entity/animal.entity';
 import { Keeper } from 'src/keeper/models/entity/keeper.entity';
 import {
-  Column,
+  PrimaryGeneratedColumn,
   CreateDateColumn,
-  Entity,
+  UpdateDateColumn,
   JoinColumn,
   ManyToOne,
-  PrimaryGeneratedColumn,
-  UpdateDateColumn,
+  Entity,
+  Column,
 } from 'typeorm';
 
 @Entity()

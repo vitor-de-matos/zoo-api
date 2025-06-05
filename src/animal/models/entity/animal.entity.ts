@@ -15,6 +15,7 @@ import {
   Column,
   Entity,
 } from 'typeorm';
+import { FeedingSchedule } from 'src/feeding-schedule/models/entity/feeding-schedule.entity';
 
 @Entity()
 export class Animal {
@@ -41,8 +42,8 @@ export class Animal {
   @OneToMany(() => TransferRecords, (transferRecords) => transferRecords.animal)
   transferRecords: TransferRecords[];
 
-  @OneToMany(() => Nutrition, (nutrition) => nutrition.animal)
-  nutritions: Nutrition[];
+  @OneToMany(() => FeedingSchedule, (feedingSchedule) => feedingSchedule.animal)
+  feedingSchedule: FeedingSchedule[];
 
   @OneToMany(
     () => QuarantineRecord,

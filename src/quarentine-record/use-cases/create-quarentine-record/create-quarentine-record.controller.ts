@@ -1,14 +1,14 @@
 import { Body, Controller, Inject, Post } from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiBody,
-  ApiCreatedResponse,
-  ApiInternalServerErrorResponse,
-  ApiOperation,
-  ApiTags,
-} from '@nestjs/swagger';
 import { CreateQuarentineRecordUseCase } from './create-quarentine-record.use-case';
 import { CreateQuarentineRecordDTO } from 'src/quarentine-record/models/dtos/create-quarentine-record.dto';
+import {
+  ApiInternalServerErrorResponse,
+  ApiCreatedResponse,
+  ApiBearerAuth,
+  ApiOperation,
+  ApiBody,
+  ApiTags,
+} from '@nestjs/swagger';
 
 @ApiTags('Registro de quarentena')
 @ApiBearerAuth('access-token')
